@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="textOutput"></p>
+    <img id="img" width="300" src="/lorem-ipsum.jpg" alt="Lorem Ipsum">
+    
+    <script>
+
+        const text =  document.getElementById("textOutput");
+        const image = document.getElementById("img");
+
+        image.addEventListener("load", () => {
+            text.textContent = "Betöltődött";
+        })
+
+        image.addEventListener("click", () => {
+            text.textContent = "Rákattintott";
+        })
+
+    </script>
+
+</body>
+</html>

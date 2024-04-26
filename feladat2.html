@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input id="textInput1" type="text" placeholder="Ide írj!">
+        <p></p>
+        <input id="textInput2" type="text" placeholder="Ne, ide írj!">
+        <p></p>
+        <input id="textInput3" type="text" placeholder="Neeeee, ide ííírj!!">
+
+        <script>
+
+            const textInput1 = document.getElementById("textInput1");
+            const textInput2 = document.getElementById("textInput2");
+            const textInput3 = document.getElementById("textInput3");
+
+
+            textInput1.addEventListener('input', () => {
+                textInput1.style.color = "green";
+                textInput2.style.color = "black";
+                textInput3.style.color = "black";
+            })
+            textInput2.addEventListener('input', () => {
+                textInput1.style.color = "black";
+                textInput2.style.color = "green";
+                textInput3.style.color = "black";
+            })
+            textInput3.addEventListener('input', () => {
+                textInput1.style.color = "black";
+                textInput2.style.color = "black";
+                textInput3.style.color = "green";
+            })
+
+        </script>
+
+    </form>
+
+</body>
+</html>
